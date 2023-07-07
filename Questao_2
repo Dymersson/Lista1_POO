@@ -1,0 +1,51 @@
+//Criar um algoritmo que informe a quantidade total de calorias de uma refeição a partir do usuário que deverá informar o prato, a sobremesa e a bebida (veja a tabela a seguir). 
+//Enumere cada opção de prato, sobremesa e bebida.
+
+//Prato: 1 - vegetariano, 2 – Peixe, 3 – Frango, 4 – Carne;
+
+//Sobremesa: 1 – Abacaxi, 2 – Sorvete diet, 3 – Mouse diet, 4 – Mouse chocolate;
+
+//Bebida: 1 – Chá, 2 - Suco de laranja, 3 – Suco de melão, 4 – Refrigerante diet. 
+
+import java.util.Scanner;
+
+    public class CalculoCalorias{
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            
+            //Tabela de Calorias 
+
+            int[] caloriasPrato = {180, 230, 250, 350};
+            int[] caloriasSobremesa = {75, 110, 170, 200};
+            int[] caloriasBebidas = {20, 70, 100, 65};
+
+            String[] opcoesPrato = {"Vegetariano", "Peixe", "Frango", "Carne" };
+            String[] opcoesSobremesa = {"Abacaxi", "Sorvete Diet", "Mouse Diet", "Mouse de Chocolate" };
+            String[] opcoesBebidas = {"Chá", "Suco de Laranja", "Suco de Melão", "Refrigerante Diet" };
+    
+            System.out.println("Escolha uma opção de prato: ");
+            for (int i = 0; i< opcoesPrato.length; i++) {
+                System.out.println((i + 1) + " " + opcoesPrato[i]);
+    }
+    int escolhaPrato = scanner.nextInt();
+
+    System.out.println("Escolha uma opção de sobremesa: ");
+        for (int i = 0; i< opcoesSobremesa.length; i++) {
+            System.out.println((i + 1) + " " + opcoesSobremesa[i]);
+        }
+        int escolhaSobremesa = scanner.nextInt();
+
+    System.out.println("Escolha uma opção de bebida: ");
+    for (int i = 0; i< opcoesBebidas.length; i++) {
+            System.out.println((i + 1) + " " + opcoesBebidas[i]);
+        }
+        int escolhaBebida = scanner.nextInt();    
+        
+        int caloriasTotais = caloriasPrato[escolhaPrato - 1] + caloriasBebidas[escolhaBebidas - 1]+
+        caloriasSobremesa[escolhaSobremesa - 1];
+
+        System.out.println("A quantidade de calorias da refeição é: " + caloriasTotais + "cal");
+
+        scanner.close();
+    }
+}   
